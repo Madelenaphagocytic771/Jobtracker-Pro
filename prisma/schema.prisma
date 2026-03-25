@@ -1,0 +1,48 @@
+generator client {
+  provider        = "prisma-client"
+  output          = "../src/generated/prisma"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id           String         @id @default(cuid())
+  email        String         @unique
+  name         String
+  password     String
+  createdAt    DateTime       @default(now())
+  jobs         Job[]
+  resetTokens  PasswordReset[]
+}
+
+model PasswordReset {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  token     String   @unique
+  expiresAt DateTime
+  used      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model Job {
+  id                String   @id @default(cuid())
+  userId            String
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  company           String
+  role              String
+  department        String?
+  status            String   @default("applied")
+  applyDate         String
+  jdLink            String?
+  referrer          String?
+  channel           String?
+  reflections       String   @default("")
+  nextInterviewDate String?
+  events            String   @default("[]") // JSON array
+  createdAt         String
+  updatedAt         String
+}

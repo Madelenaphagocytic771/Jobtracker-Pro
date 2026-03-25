@@ -1,0 +1,40 @@
+services:
+  jobtracker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runner
+    container_name: jobtracker
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - NEXTAUTH_URL=${NEXTAUTH_URL:-http://localhost:3000}
+      - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
+      - DATABASE_URL=file:/data/dev.db
+    volumes:
+      # Source code — edit on host, reflected immediately in container
+      - ./src:/app/src
+      - ./public:/app/public
+      - ./prisma:/app/prisma
+      - ./.env:/app/.env:ro
+      # Config files
+      - ./next.config.ts:/app/next.config.ts:ro
+      - ./tsconfig.json:/app/tsconfig.json:ro
+      - ./postcss.config.mjs:/app/postcss.config.mjs:ro
+      - ./package.json:/app/package.json:ro
+      # Persistent data (SQLite database)
+      - jobtracker_data:/data
+      # Next.js build cache — keep between restarts
+      - jobtracker_next:/app/.next
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/api/auth/session"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+volumes:
+  jobtracker_data:   # SQLite .db file
+  jobtracker_next:   # .next build cache
