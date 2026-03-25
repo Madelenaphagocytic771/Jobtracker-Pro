@@ -4,144 +4,145 @@
 
 # JobTracker Pro
 
-**个人求职全链路追踪系统**
+**A full-cycle job application tracking system**
 
-从投递到 Offer，全程可视化管理，让求职不再焦虑。
+Visualize every step from application to offer. Stay organized, never miss an interview.
 
-[![演示地址](https://img.shields.io/badge/🌐_在线演示-job.lifebytes.cn-3b82f6?style=for-the-badge)](http://job.lifebytes.cn)
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-job.lifebytes.cn-3b82f6?style=for-the-badge)](http://job.lifebytes.cn)
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-06b6d4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-ready-2496ed?style=for-the-badge&logo=docker&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)
 
+**[中文文档](./README.zh-CN.md)**
+
 </div>
 
 ---
 
-## 📸 功能截图
+## 📸 Screenshots
 
-### 数据看板
-<img src="png/toudi.png" alt="数据看板" width="100%" />
+### Dashboard
+<img src="png/toudi.png" alt="Dashboard" width="100%" />
 
-> 核心指标卡、求职进度阶梯图、未来 7 天面试提醒，一屏掌握全局。
+> Key metrics, job funnel chart, and upcoming interview reminders — all at a glance.
 
-### 拖拽看板
-<img src="png/kanban.png" alt="拖拽看板" width="100%" />
+### Kanban Board
+<img src="png/kanban.png" alt="Kanban Board" width="100%" />
 
-> 7 阶段敏捷看板，拖拽卡片即可更新状态，状态色彩语义清晰。
+> 7-stage agile board with drag & drop. Color-coded columns for instant status recognition.
 
-### 投递列表
-<img src="png/list.png" alt="投递列表" width="100%" />
+### Application List
+<img src="png/list.png" alt="Application List" width="100%" />
 
-> 全文搜索 + 多维排序 + 状态筛选，`Ctrl+K` 快捷唤起搜索框。
+> Full-text search, multi-column sorting, and status filters. Press `Ctrl+K` to search instantly.
 
-### 日历视图
-<img src="png/rili.png" alt="日历视图" width="100%" />
+### Calendar View
+<img src="png/rili.png" alt="Calendar View" width="100%" />
 
-> 月历展示所有面试安排，一目了然，不再错过任何面试。
+> Monthly calendar showing all interviews and assessments. Click any event to open details.
 
-### 设置页
-<img src="png/setting.png" alt="设置" width="100%" />
+### Settings
+<img src="png/setting.png" alt="Settings" width="100%" />
 
-> 修改密码、JSON 数据备份导出、一键清空。
-
----
-
-## ✨ 核心功能
-
-| 模块 | 功能 |
-|------|------|
-| 📊 **数据看板** | 总投递数、面试率、Offer 率、进度阶梯图、7 天待办提醒 |
-| 🗂 **拖拽看板** | 7 阶段看板（意向池→Offer），拖拽更新状态，状态色彩区分 |
-| 📋 **投递列表** | 全文搜索、多维排序、状态筛选，支持 `Ctrl+K` 快捷搜索 |
-| 📅 **日历视图** | 月历展示面试/笔试安排，点击事件直达详情 |
-| 📝 **深度复盘** | 右侧滑出抽屉，Markdown 编辑器记录面试笔记 |
-| 🕒 **流转时间轴** | 记录每个阶段的时间节点和备注 |
-| 🔐 **多用户系统** | 注册/登录/找回密码，bcrypt 加密，JWT 鉴权 |
-| 🌙 **暗色模式** | 明/暗主题一键切换 |
-| 💾 **数据备份** | 一键导出/导入 JSON，数据永不丢失 |
-| 🐳 **Docker 部署** | 开箱即用，宿主机代码热更新无需重启 |
+> Change password, export/import JSON backup, and danger zone.
 
 ---
 
-## 🛠 技术栈
+## ✨ Features
+
+| Module | Description |
+|--------|-------------|
+| 📊 **Dashboard** | Metrics cards, funnel ladder chart, 7-day upcoming reminders |
+| 🗂 **Kanban Board** | 7-stage drag & drop board (Wishlist → Offer), color-coded columns |
+| 📋 **List View** | Full-text search, sorting, status filter, `Ctrl+K` shortcut |
+| 📅 **Calendar** | Monthly view of all interview/assessment events |
+| 📝 **Reflection Editor** | Slide-out drawer with Markdown editor for interview notes |
+| 🕒 **Timeline** | Per-application event history with timestamps |
+| 🔐 **Auth System** | Register / Login / Forgot password, bcrypt + JWT |
+| 🌙 **Dark Mode** | One-click light/dark theme toggle |
+| 💾 **Data Backup** | Export/import JSON anytime |
+| 🐳 **Docker Ready** | Hot-reload in container via volume mounts |
+
+---
+
+## 🛠 Tech Stack
 
 ```
-前端框架    Next.js 16 (App Router) + TypeScript
-样式        Tailwind CSS v4
-UI 组件     Radix UI Primitives（自建组件体系）
-状态管理    Zustand
-数据库      SQLite + Prisma ORM 7
-认证        NextAuth.js v5 Beta
-拖拽        @dnd-kit/core + @dnd-kit/sortable
-图表        Recharts
-Markdown    react-markdown + remark-gfm
-主题        next-themes
-容器化      Docker + Docker Compose
+Framework     Next.js 16 (App Router) + TypeScript
+Styling       Tailwind CSS v4
+UI            Radix UI Primitives
+State         Zustand
+Database      SQLite + Prisma ORM 7
+Auth          NextAuth.js v5 Beta
+Drag & Drop   @dnd-kit/core + @dnd-kit/sortable
+Charts        Recharts
+Markdown      react-markdown + remark-gfm
+Theme         next-themes
+Container     Docker + Docker Compose
 ```
 
 ---
 
-## 🚀 快速开始
+## 🚀 Getting Started
 
-### 本地开发
+### Local Development
 
 ```bash
-# 克隆项目
+# Clone the repo
 git clone https://github.com/P2hemia/Jobtracker-Pro.git
 cd Jobtracker-Pro
 
-# 安装依赖
+# Install dependencies
 npm install --legacy-peer-deps
 
-# 配置环境变量
+# Set up environment variables
 cp .env.example .env
-# 编辑 .env，填写 NEXTAUTH_SECRET（见下方说明）
+# Edit .env and fill in NEXTAUTH_SECRET
 
-# 初始化数据库
+# Initialize the database
 npx prisma db push
 
-# 启动
+# Start dev server
 npm run dev
-# 访问 http://localhost:3000
+# Open http://localhost:3000
 ```
 
-### 环境变量说明
+### Environment Variables
 
 ```env
-# 随机密钥，至少 32 位（生成命令：openssl rand -base64 32）
+# Random secret, at least 32 chars (generate: openssl rand -base64 32)
 NEXTAUTH_SECRET=your-random-secret-here
 
-# 应用访问地址
+# Your app URL
 NEXTAUTH_URL=http://localhost:3000
 
-# SQLite 数据库路径
+# SQLite database path
 DATABASE_URL=file:./prisma/dev.db
 ```
 
 ---
 
-## 🐳 Docker 部署
+## 🐳 Docker Deployment
 
-### 1. 克隆 & 配置
+### 1. Clone & Configure
 
 ```bash
 git clone https://github.com/P2hemia/Jobtracker-Pro.git
 cd Jobtracker-Pro
 
 cp .env.example .env
-nano .env
-# 修改 NEXTAUTH_SECRET 和 NEXTAUTH_URL（改为你的服务器 IP 或域名）
+nano .env  # Set NEXTAUTH_SECRET and NEXTAUTH_URL
 ```
 
-### 2. 启动
+### 2. Build & Start
 
 ```bash
 docker compose up -d --build
 ```
 
-### 3. 初始化数据库（首次部署执行一次）
+### 3. Initialize Database (first time only)
 
 ```bash
 cat > /tmp/init_db.sh << 'EOF'
@@ -157,65 +158,65 @@ docker compose cp /tmp/init_db.sh jobtracker:/tmp/init_db.sh
 docker compose exec jobtracker sh /tmp/init_db.sh
 ```
 
-### 4. 访问
+### 4. Access
 
-打开 `http://你的IP或域名:3000`，注册账号即可使用。
+Open `http://your-server-ip:3000`, register an account and start tracking.
 
-### 宿主机热更新
+### Hot Reload on Host
 
-`src/`、`public/`、`prisma/` 已通过 Docker Volume 挂载。
-**在宿主机直接修改代码，无需重启容器，刷新浏览器即可生效。**
+`src/`, `public/`, and `prisma/` are mounted as Docker volumes.
+**Edit code on the host machine — changes reflect instantly without restarting the container.**
 
-### 常用运维命令
+### Useful Commands
 
 ```bash
-# 查看实时日志
+# View logs
 docker compose logs -f
 
-# 重启
+# Restart
 docker compose restart
 
-# 停止
+# Stop
 docker compose down
 
-# 进入容器调试
+# Enter container
 docker compose exec jobtracker sh
 ```
 
 ---
 
-## 📁 项目结构
+## 📁 Project Structure
 
 ```
 jobtracker-pro/
 ├── src/
 │   ├── app/
-│   │   ├── page.tsx              # 数据看板
-│   │   ├── kanban/               # 拖拽看板
-│   │   ├── table/                # 投递列表
-│   │   ├── calendar/             # 日历视图
-│   │   ├── settings/             # 设置
-│   │   ├── login/                # 登录/注册
-│   │   ├── forgot-password/      # 找回密码
-│   │   └── api/                  # 后端 API Routes
+│   │   ├── page.tsx              # Dashboard
+│   │   ├── kanban/               # Kanban board
+│   │   ├── table/                # Application list
+│   │   ├── calendar/             # Calendar view
+│   │   ├── settings/             # Settings
+│   │   ├── login/                # Login / Register
+│   │   ├── forgot-password/      # Password recovery
+│   │   └── api/                  # Backend API Routes
 │   ├── components/
-│   │   ├── ui/                   # 基础 UI 组件
+│   │   ├── ui/                   # Base UI components
 │   │   ├── Navbar.tsx
-│   │   ├── JobCard.tsx           # 看板卡片
-│   │   ├── KanbanColumn.tsx      # 看板列
-│   │   ├── JobDetailDrawer.tsx   # 详情抽屉
-│   │   └── AddJobDialog.tsx      # 新增投递弹窗
+│   │   ├── JobCard.tsx
+│   │   ├── KanbanColumn.tsx
+│   │   ├── JobDetailDrawer.tsx
+│   │   └── AddJobDialog.tsx
 │   ├── store/
-│   │   └── useJobStore.ts        # Zustand 全局状态
+│   │   └── useJobStore.ts        # Zustand global state
 │   ├── lib/
-│   │   ├── prisma.ts             # Prisma Client
-│   │   ├── auth.ts               # NextAuth 配置
+│   │   ├── prisma.ts
+│   │   ├── auth.ts
 │   │   └── utils.ts
 │   └── types/
-│       └── index.ts              # TypeScript 类型
+│       └── index.ts
 ├── prisma/
-│   └── schema.prisma             # 数据库模型
-├── png/                          # 截图资源
+│   └── schema.prisma
+├── png/                          # Screenshots
 ├── Dockerfile
 ├── docker-compose.yml
 └── .env.example
@@ -223,15 +224,15 @@ jobtracker-pro/
 
 ---
 
-## 🤝 贡献
+## 🤝 Contributing
 
-欢迎提交 Issue 和 Pull Request！
+Pull requests are welcome!
 
-1. Fork 本仓库
-2. 创建分支：`git checkout -b feature/your-feature`
-3. 提交：`git commit -m 'feat: add your feature'`
-4. 推送：`git push origin feature/your-feature`
-5. 提交 Pull Request
+1. Fork the repo
+2. Create your branch: `git checkout -b feature/your-feature`
+3. Commit: `git commit -m 'feat: add your feature'`
+4. Push: `git push origin feature/your-feature`
+5. Open a Pull Request
 
 ---
 
